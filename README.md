@@ -6,6 +6,7 @@ class Grid:
     gridPositions;
 
   Methods:
+    displayGrid()
     createCells()
 
 
