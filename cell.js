@@ -1,20 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cell = void 0;
-class Cell {
-    constructor(cellValue = null, isValidCell = true) {
+var Cell = /** @class */ (function () {
+    function Cell(cellValue, isValidCell) {
+        if (cellValue === void 0) { cellValue = null; }
+        if (isValidCell === void 0) { isValidCell = true; }
         this.cellValue = cellValue;
         this.isValidCell = isValidCell;
     }
-    set value(value) {
-        this.cellValue = value;
-        this.isValidCell = false;
-    }
-    get value() {
-        return this.cellValue;
-    }
-    isValid() {
+    Object.defineProperty(Cell.prototype, "value", {
+        get: function () {
+            return this.cellValue;
+        },
+        set: function (value) {
+            this.cellValue = value;
+            this.isValidCell = false;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Cell.prototype.isValid = function () {
         return this.cellValue === null;
-    }
-}
+    };
+    return Cell;
+}());
 exports.Cell = Cell;
