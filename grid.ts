@@ -1,7 +1,7 @@
 import { Cell } from './cell';
 
 export class Grid {
-  private gridItems: Cell[][];
+gridItems: Cell[][];
   private isGridFull: boolean;
   constructor(private size: number = 3) {
     this.gridItems = this.initializeGrid(size);
