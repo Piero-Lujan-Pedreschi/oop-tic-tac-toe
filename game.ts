@@ -121,12 +121,9 @@ export class Game {
             )
           );
         }
+        this.rl.close();
       });
     });
-  }
-
-  close(): void {
-    this.rl.close();
   }
 
   xTurn() {
